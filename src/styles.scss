@@ -1,0 +1,51 @@
+@import "./styles/colors";
+@import "./styles/variables";
+@import "./styles/mixins";
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+i {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: all 0.8s;
+
+  &:hover {
+    color: white;
+    transition: background 0.8s;
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%)
+      center/15000%;
+  }
+
+  &:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}

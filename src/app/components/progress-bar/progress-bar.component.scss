@@ -1,0 +1,30 @@
+@import "../../../styles.scss";
+.progress-container {
+  display: grid;
+  align-items: center;
+  position: relative;
+
+  small {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+  }
+
+  progress {
+    width: 100%;
+    height: 15px;
+
+    background-color: #eee;
+    transition: all 1s;
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: $blue;
+    transition: all 3s;
+  }
+
+  progress[value]::-webkit-progress-bar,
+  progress[value]::-webkit-progress-value {
+    border-radius: 20px;
+  }
+}

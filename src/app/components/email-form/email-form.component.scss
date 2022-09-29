@@ -1,0 +1,73 @@
+@import "src/styles";
+
+.email-form-container {
+  display: grid;
+  gap: 10px;
+
+  .email-container {
+    .form-container {
+      padding: 10px;
+
+      h2 {
+        color: $blue;
+      }
+
+      .email-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        input,
+        textarea {
+          padding-left: 33px;
+          &:focus {
+            & + i {
+              transition: all 0.3s;
+              color: $blue;
+            }
+          }
+        }
+
+        .message {
+          grid-column: span 2;
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 20px;
+            left: 18px;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .name,
+        .email {
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 20px;
+            left: 18px;
+            transform: translate(-50%, -50%);
+          }
+
+          &.error {
+            border-left: 5px solid $red;
+          }
+        }
+        .error {
+          font-size: 0.75em;
+          color: $red;
+        }
+
+        button {
+          grid-column: span 2;
+          border: 1px solid $blue;
+          background-color: white;
+          padding: 10px 40px;
+          justify-self: end;
+        }
+      }
+    }
+  }
+}

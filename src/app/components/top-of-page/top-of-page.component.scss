@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+button {
+  position: fixed;
+  z-index: 2;
+  right: 3%;
+  bottom: 3%;
+  border-radius: 50%;
+  border: none;
+  background-color: $red;
+
+  @include box-shadow();
+  transition: all 0.3s;
+
+  height: 0;
+  width: 0;
+  visibility: hidden;
+
+  &.is-shown {
+    height: 50px;
+    width: 50px;
+    visibility: visible;
+  }
+
+  i {
+    color: white;
+    font-size: 0;
+
+    &.is-shown {
+      font-size: 15px;
+    }
+  }
+}

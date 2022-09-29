@@ -1,0 +1,99 @@
+<h1>Pipes</h1>
+<hr />
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Sort By Key'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    <h5>String Ascending</h5>
+    <p *ngFor="let obj of objectArray | sortByKey: 'content'">
+      {{ obj.content }}
+    </p>
+
+    <br />
+    <h5>String Descending</h5>
+    <p *ngFor="let obj of objectArray | sortByKey: 'content':false">
+      {{ obj.content }}
+    </p>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Sort By'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    <h5>String Ascending</h5>
+    <p>{{ stringArray | sortBy }}</p>
+
+    <br />
+
+    <h5>String Descending</h5>
+    <p>{{ stringArray | sortBy: false }}</p>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Rich Text'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    <div [innerHtml]="html | richText"></div>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Filter Term'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    <p>{{ ["Hello", "World", "Hello World"] | appFilterTerm: "Hello" }}</p>
+    <p>{{ ["Hello", "World", "Hello World"] | appFilterTerm: "World" }}</p>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Flatten'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    {{ flattenData | appFlatten }}
+  </div>
+
+  <div class="footer" footer>
+    <button (click)="modifyFlatten()">Modify</button>
+    <button (click)="reassignFlatten()">Reassign</button>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Credit Card Formatter'"
+  [subTitle]="'Pipes'"
+>
+  <div body>
+    <p>{{ "1111222233334444" | creditCardFormatter }}</p>
+    <p>{{ "11111111111111111111111" | creditCardFormatter }}</p>
+    <p>{{ "a111222233334444" | creditCardFormatter }}</p>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fa-solid fa-circle-info'"
+  [title]="'Truncate'"
+  [subTitle]="'Pipes'"
+>
+  <p body>
+    {{
+      "Lorem ipsum dolor sit amet consectetur 
+      adipisicing elit. Voluptatem architecto in fugit deleniti nostrum? Ex beatae voluptas magni modi autem suscipit quisquam error, accusamus nostrum est vel fugiat hic? Ipsam."
+        | appTruncate: 25
+    }}
+  </p>
+</app-card>

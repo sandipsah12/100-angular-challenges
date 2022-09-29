@@ -1,0 +1,81 @@
+<h1>Directives</h1>
+<hr />
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Auto Focus'"
+  [subTitle]="'Directives'"
+>
+  <div body>
+    <input type="text" appAutoFocus />
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Copy'"
+  [subTitle]="'Directives'"
+>
+  <button
+    body
+    appCopy="Directive Copy Example"
+    style="border: 1px solid black; text-align: center; padding: 10px"
+  >
+    Copy
+  </button>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Scale'"
+  [subTitle]="'Directive'"
+>
+  <div
+    body
+    appScale
+    style="
+      width: 100px;
+      height: 100px;
+      background-color: #007acc;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  ></div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Ripple'"
+  [subTitle]="'Directives'"
+>
+  <div body>
+    <button
+      appRipple="ripple"
+      style="border: 1px solid black; text-align: center; padding: 10px"
+    >
+      Ripple Button
+    </button>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Debounce Click'"
+  [subTitle]="'Directives'"
+>
+  <div body appDebounceClick (debouceClick)="log()"><button>Log</button></div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Lazy Load Image'"
+  [subTitle]="'Directives'"
+>
+  <div body>
+    <img
+      src="https://images.unsplash.com/photo-1663930981910-7a4c077feb85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+      appLazyLoadImage
+      width="500px"
+    />
+  </div>
+</app-card>

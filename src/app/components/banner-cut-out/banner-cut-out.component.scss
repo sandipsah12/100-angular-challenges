@@ -1,0 +1,22 @@
+header {
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  height: 300px;
+
+  h1 {
+    background-color: white;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: auto;
+    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    mix-blend-mode: screen;
+  }
+}

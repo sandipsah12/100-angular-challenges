@@ -1,0 +1,62 @@
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+
+  .loader-container {
+    display: flex;
+    justify-content: center;
+
+    .loader {
+      position: absolute;
+      top: 35%;
+
+      .loading {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+
+        span {
+          overflow: hidden;
+          font-size: 30px;
+          font-weight: bolder;
+          letter-spacing: 10px;
+          animation: typing 3s infinite steps(6);
+        }
+
+        @keyframes typing {
+          0% {
+            width: 10px;
+          }
+
+          100% {
+            width: 100%;
+          }
+        }
+      }
+      .circular {
+        border: 10px solid #eee;
+        border-radius: 50%;
+        border-top: 10px solid #3498db;
+        width: 100px;
+        height: 100px;
+        animation: spin 1s linear infinite;
+        @keyframes spin {
+          0% {
+            rotate: 0deg;
+          }
+
+          100% {
+            rotate: 360deg;
+          }
+        }
+      }
+    }
+  }
+}

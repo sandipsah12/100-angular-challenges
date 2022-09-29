@@ -1,0 +1,13 @@
+:host {
+  display: grid;
+}
+
+main {
+  display: grid;
+  padding: 20px;
+  gap: 10px;
+}
+
+.active {
+  border-bottom: 2px solid white;
+}

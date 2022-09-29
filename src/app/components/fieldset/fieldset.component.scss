@@ -1,0 +1,14 @@
+@import "src/styles";
+
+fieldset {
+  padding: 5px 20px;
+
+  legend {
+    cursor: pointer;
+    border: 1px solid $tertiary-background;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: $tertiary-background;
+    color: white;
+  }
+}

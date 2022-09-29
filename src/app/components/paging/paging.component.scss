@@ -1,0 +1,27 @@
+@import "src/styles";
+ul {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+
+  li {
+    display: inline;
+    text-decoration: none;
+    margin: 3px;
+
+    button {
+      border: none;
+      background-color: white;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      @include box-shadow();
+
+      &.current-page {
+        background-color: $blue;
+        color: white;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

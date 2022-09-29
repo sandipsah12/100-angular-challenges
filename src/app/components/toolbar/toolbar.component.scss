@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+.toolbar-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr auto;
+  //   align-items: ;
+  padding: 10px;
+  background-color: $blue;
+  color: white;
+
+  @include box-shadow();
+
+  @media screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+:host ::ng-deep {
+  ul {
+    display: grid;
+    gap: 10px;
+    grid-auto-flow: column;
+    list-style: none;
+    li {
+      cursor: pointer;
+    }
+  }
+}

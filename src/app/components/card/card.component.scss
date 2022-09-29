@@ -1,0 +1,31 @@
+@import "../../../styles.scss";
+
+.card-container {
+  display: grid;
+  gap: 10px;
+  border-radius: 3px;
+
+  @include box-shadow();
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: $green;
+    color: white;
+  }
+
+  .title {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .body,
+  .footer {
+    padding: 10px;
+  }
+}
